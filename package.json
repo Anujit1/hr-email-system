@@ -1,0 +1,19 @@
+{
+  "name": "hr-email-system",
+  "version": "1.0.0",
+  "description": "This is a email reply system designed for hr.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anujit1/hr-email-system.git"
+  },
+  "author": "Anujit Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anujit1/hr-email-system/issues"
+  },
+  "homepage": "https://github.com/Anujit1/hr-email-system#readme"
+}
