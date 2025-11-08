@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HR Candidate Email Response Tool</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HR Candidate Email Response Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <h1>HR Candidate Email Response Tool</h1>
 
-    <link rel="stylesheet" href="./style.css">
-  </head>
+    <form id="emailForm" aria-label="Candidate email form" novalidate>
+      <div class="form-group">
+        <label for="name">Candidate Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Rahul Kumar" required aria-required="true" />
+      </div>
 
-  <body>
-    <h2>Email Reply System</h2>
-    <script src="script.js"></script>
-  </body>
+      <div class="form-group">
+        <label for="email">Candidate Email</label>
+        <input type="email" id="email" name="email" placeholder="e.g. candidate@example.com" required aria-required="true" />
+      </div>
+
+      <div class="form-group">
+        <label for="role">Position Applied</label>
+        <input type="text" id="role" name="role" placeholder="e.g. Frontend Developer" required aria-required="true" />
+      </div>
+
+      <fieldset class="form-group" aria-labelledby="statusLegend">
+        <legend id="statusLegend">Status</legend>
+        <div class="radio-group" role="radiogroup" aria-required="true">
+          <label class="radio-label">
+            <input type="radio" name="status" value="Selected" required /> Selected
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="status" value="Rejected" required /> Rejected
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit" id="sendBtn" aria-label="Send email">Send Email</button>
+    </form>
+
+    <p id="message" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>

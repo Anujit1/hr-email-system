@@ -1,0 +1,97 @@
+/* Base */
+* { box-sizing: border-box; }
+html,body { height: 100%; margin: 0; font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+body {
+  background: linear-gradient(180deg, #f7f9fb 0%, #eef3f7 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 24px;
+}
+
+/* Card */
+.container {
+  background: #ffffff;
+  width: 420px;
+  max-width: 100%;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(19, 27, 42, 0.08);
+  text-align: left;
+}
+
+/* Headline */
+h1 {
+  margin: 0 0 18px;
+  font-size: 20px;
+  color: #102a43;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Form */
+.form-group { margin-bottom: 14px; }
+label { display:block; margin-bottom:6px; color:#334e68; font-weight:500; font-size:13px; }
+input[type="text"], input[type="email"] {
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #d1dbe6;
+  border-radius:8px;
+  font-size:14px;
+  background: #fff;
+  transition: border-color .15s, box-shadow .15s;
+}
+input:focus {
+  outline: none;
+  border-color: #7aa7ff;
+  box-shadow: 0 0 0 4px rgba(122,167,255,0.08);
+}
+
+/* Radio group */
+.radio-group { display:flex; gap:12px; align-items:center; }
+.radio-label {
+  display:flex;
+  gap:8px;
+  align-items:center;
+  background:#fbfdff;
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid #e6eef8;
+  cursor:pointer;
+  user-select:none;
+  font-size:14px;
+}
+.radio-label input { accent-color: #007bff; }
+
+/* Button */
+button#sendBtn {
+  display:block;
+  width:100%;
+  padding:11px 14px;
+  margin-top:6px;
+  border-radius:10px;
+  border: none;
+  background: linear-gradient(180deg,#007bff,#0063d1);
+  color: #fff;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+button#sendBtn:active { transform: translateY(1px); }
+button#sendBtn:disabled { opacity:0.6; cursor:not-allowed; }
+
+/* Message */
+#message { margin-top:12px; font-size:14px; min-height:20px; color:#334e68; }
+#message.success { color: #056608; }
+#message.error { color: #b00020; }
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container { padding: 20px; width: 94%; }
+  h1 { font-size: 18px; }
+  .radio-group { flex-direction: column; align-items: stretch; }
+  .radio-label { justify-content: flex-start; width:100%; }
+  input[type="text"], input[type="email"] { font-size: 15px; padding: 12px; }
+  button#sendBtn { padding: 12px; font-size: 15px; border-radius: 8px; }
+}
